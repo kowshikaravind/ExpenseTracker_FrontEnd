@@ -12,8 +12,7 @@ body {
     grey 60%,
     rgb(141, 141, 141) 60%
   );
-  margin: 0;
-  padding: 0;
+  position: static;
 }
 
 .expense-container {
@@ -22,7 +21,9 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px 4px rgb(255, 255, 255);
   max-width: 600px;
-  margin: 20px auto;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
 .expense-item {
@@ -83,7 +84,6 @@ button {
   width: 100%;
 }
 
-
 .balance-container {
   background: linear-gradient(
     135deg,
@@ -96,8 +96,8 @@ button {
   padding: 20px;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .currency-item {
@@ -117,7 +117,8 @@ button {
   color: #fff;
   border-radius: 10px;
   padding: 20px 30px;
-  flex: 1 1 150px;
+  min-width: 120px;
+  flex: 1;
 }
 
 .currency-item .title {
@@ -173,21 +174,15 @@ button {
   transform: translateX(0);
 }
 
-/* 📱 Mobile adjustments */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .expense-container {
-    max-width: 95%;
     padding: 15px;
-  }
-
-  .balance-container {
-    flex-direction: column;
-    align-items: center;
+    margin-top: 20px;
   }
 
   .currency-item {
-    width: 100%;
     padding: 15px;
+    min-width: 100px;
   }
 
   .currency-item .amount {
